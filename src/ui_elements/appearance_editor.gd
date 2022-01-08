@@ -4,7 +4,7 @@ onready var Resources = get_node("/root/Resources")
 onready var Appearance = get_node("/root/Appearance")
 
 onready var tabs = $MenuMargin/HBoxContainer/TabBox/TabContainer
-onready var character = $MenuMargin/HBoxContainer/PlayerBox/Player/MenuPlayer/Skeleton
+onready var character = $MenuMargin/HBoxContainer/PlayerBox/Player/MenuPlayer/Viewport/Skeleton
 
 var currentTab: int # ID of selected tab
 var selectedItem: int # ID of selected item

@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://ui_elements/assets/themes/suspect_ui.tres" type="Theme" id=1]
-[ext_resource path="res://game/character/menu_player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://game/character/menu_character.tscn" type="PackedScene" id=2]
 [ext_resource path="res://ui_elements/mainmenu.gd" type="Script" id=3]
 [ext_resource path="res://ui_elements/background.tscn" type="PackedScene" id=4]
 [ext_resource path="res://ui_elements/assets/images/logo.svg" type="Texture" id=5]
@@ -52,7 +52,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CenterPlayer" type="CenterContainer" parent="MainMenu"]
+[node name="CenterCharacter" type="CenterContainer" parent="MainMenu"]
 margin_right = 372.0
 margin_bottom = 537.0
 grow_horizontal = 2
@@ -60,15 +60,15 @@ grow_vertical = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
-[node name="Player" type="Button" parent="MainMenu/CenterPlayer"]
+[node name="Character" type="Button" parent="MainMenu/CenterCharacter"]
 margin_right = 372.0
 margin_bottom = 537.0
 rect_min_size = Vector2( 372, 537 )
 size_flags_vertical = 3
 theme = ExtResource( 7 )
 
-[node name="MenuPlayer" parent="MainMenu/CenterPlayer/Player" instance=ExtResource( 2 )]
-position = Vector2( 128.5, 203.5 )
+[node name="MenuCharacter" parent="MainMenu/CenterCharacter/Character" instance=ExtResource( 2 )]
+position = Vector2( 180.5, 461.5 )
 
 [node name="PositionMenu" type="MarginContainer" parent="MainMenu"]
 margin_left = 376.0
@@ -320,7 +320,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="MainMenu/CenterPlayer/Player" to="." method="_on_Player_pressed"]
+[connection signal="pressed" from="MainMenu/CenterCharacter/Character" to="." method="_on_Player_pressed"]
 [connection signal="pressed" from="MainMenu/PositionMenu/Menu/GameJoinButton" to="." method="_on_GameJoinButton_pressed"]
 [connection signal="pressed" from="MainMenu/PositionMenu/Menu/GameCreateButton" to="." method="_on_GameCreateButton_pressed"]
 [connection signal="pressed" from="MainMenu/PositionMenu/Menu/ServerStartButton" to="." method="_on_ServerStartButton_pressed"]

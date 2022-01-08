@@ -10,12 +10,14 @@ onready var join_menu: Control = $Join
 onready var create_menu: Control = $Create
 onready var server_menu: Control = $Server
 
-onready var player = $MainMenu/CenterPlayer/Player/MenuPlayer/Skeleton
+onready var character = $MainMenu/CenterCharacter/Character/MenuCharacter
+onready var characterSkeleton = $MainMenu/CenterCharacter/Character/MenuCharacter/Viewport/Skeleton
 
 # --Interface--
 func _ready() -> void:
 	_randomIfUnset()
-	player.applyConfig()
+	character.setOutline(Color("#E6E2DD"))
+	characterSkeleton.applyConfig()
 	menu = MenuType.MAIN
 	setVisibleMenu(menu)
 
